@@ -8,3 +8,13 @@ Bu proje, perakende sektöründe satış performansının ve müşteri alışver
 Proje kapsamında NovaPerakende veri seti temel alınarak veri toplama, veri temizleme, dönüştürme ve görselleştirme süreçleri gerçekleştirilecektir. DuckDB veri ambarı ve dbt dönüşüm araçları kullanılarak analize hazır veri tabloları oluşturulacak, bu tablolar Power BI üzerinden etkileşimli bir dashboard ile sunulacaktır.
 
 Geliştirilecek sistemin, perakende işletmelerinin satış performansını izlemelerine ve veriye dayalı karar almalarına yardımcı olması hedeflenmektedir.
+
+İş problemi:
+
+Perakende işletmelerinde satış ve müşteri verileri farklı tablolarda tutulabilir. Bu verilerin bütünleşik biçimde analiz edilmemesi, satış performansının değerlendirilmesini ve müşteri davranışlarının anlaşılmasını zorlaştırabilir.
+
+Projenin amacı:
+
+Satış, müşteri ve sepet verilerini birleştirerek işletmenin satış performansını izleyebileceği ve kararlarını destekleyebileceği bir iş zekâsı platformu geliştirmek.
+
+Burada dikkat edeceğimiz şey, projenin yalnızca grafik çizmekten ibaret olmadığını göstermek.
