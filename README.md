@@ -1,20 +1,15 @@
-# E-Ticarette-M-teri-Davran-lar-Sat-Performans-ve-M-teri-Memnuniyeti-Analiz-Platformu
-E-Ticarette Müşteri Davranışları, Satış Performansı ve Müşteri Memnuniyeti Analiz Platformu
+Welcome to your new dbt project!
 
-Proje Özeti
+### Using the starter project
 
-Bu proje, perakende sektöründe satış performansının ve müşteri alışveriş davranışlarının veri odaklı olarak analiz edilmesini amaçlamaktadır. İşletmelerin satış, müşteri ve sepet verilerinden anlamlı bilgiler elde edebilmesi; ürün yönetimi, satış stratejileri ve kampanya kararlarının iyileştirilmesi açısından önem taşımaktadır.
+Try running the following commands:
+- dbt run
+- dbt test
 
-Proje kapsamında NovaPerakende veri seti temel alınarak veri toplama, veri temizleme, dönüştürme ve görselleştirme süreçleri gerçekleştirilecektir. DuckDB veri ambarı ve dbt dönüşüm araçları kullanılarak analize hazır veri tabloları oluşturulacak, bu tablolar Power BI üzerinden etkileşimli bir dashboard ile sunulacaktır.
 
-Geliştirilecek sistemin, perakende işletmelerinin satış performansını izlemelerine ve veriye dayalı karar almalarına yardımcı olması hedeflenmektedir.
-
-İş problemi:
-
-Perakende işletmelerinde satış ve müşteri verileri farklı tablolarda tutulabilir. Bu verilerin bütünleşik biçimde analiz edilmemesi, satış performansının değerlendirilmesini ve müşteri davranışlarının anlaşılmasını zorlaştırabilir.
-
-Projenin amacı:
-
-Satış, müşteri ve sepet verilerini birleştirerek işletmenin satış performansını izleyebileceği ve kararlarını destekleyebileceği bir iş zekâsı platformu geliştirmek.
-
-Burada dikkat edeceğimiz şey, projenin yalnızca grafik çizmekten ibaret olmadığını göstermek.
+### Resources:
+- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
+- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
+- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
+- Find [dbt events](https://events.getdbt.com) near you
+- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
