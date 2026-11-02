@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_ecommerce_customers
+    description: "Temizlenmiş müşteri verileri"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
