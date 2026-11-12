@@ -93,14 +93,27 @@ Dosya GitHub deposunda yer almaktadır.
 
 ## 🧪 Veri Kalitesi ve Testler
 
-dbt veri dönüşüm sürecinde veri kalitesini kontrol etmek amacıyla testler kullanılmaktadır.
 
-Mevcut testler arasında:
+## 🧪 Veri Kalitesi ve Testler
 
-- `not_null`: Müşteri kimlik alanının boş olmamasını kontrol eder.
-- `unique`: Müşteri kimlik alanının benzersiz olmasını kontrol eder.
+Proje kapsamında dbt kullanılarak 5 veri kalitesi testi
+uygulanmış ve tamamı başarıyla sonuçlanmıştır.
 
-Testler, dönüştürülen verilerin güvenilirliğini artırmayı amaçlamaktadır.
+| Kontrol Edilen Alan | Test | Amaç |
+|---|---|---|
+| customer_id | unique | Müşteri kimliklerinin benzersiz olması |
+| customer_id | not_null | Müşteri kimliğinin boş olmaması |
+| Payment_Method | not_null | Ödeme yönteminin boş olmaması |
+| Product_Category | not_null | Ürün kategorisinin boş olmaması |
+| Unit_Price | not_null | Birim fiyatın boş olmaması |
+
+**Test Sonuçları:**
+- PASS: 5
+- WARN: 0
+- ERROR: 0
+
+Testler `models/schema.yml` dosyasında tanımlanmıştır.
+
 
 ## 🚀 Projenin Çalıştırılması
 
@@ -160,15 +173,21 @@ py -3.13 -m dbt.cli.main build
 ## 📁 Proje Dosya Yapısı
 
 ```text
+
 ├── analyses/
+├── docs/
+│   └── veri_sozlugu.md
 ├── macros/
 ├── models/
 │   ├── marts/
 │   │   ├── mart_customers.sql
 │   │   ├── mart_sales.sql
 │   │   └── mart_satisfaction.sql
-│   ├── schema.yml
-│   └── stg_ecommerce_customers.sql
+│   ├── staging/
+│   │   └── stg_ecommerce_customers.sql
+│   └── schema.yml
+├── notebooks/
+│   └── e_ticaret_veri_analizi.ipynb
 ├── seeds/
 │   └── archive/
 ├── snapshots/
@@ -180,6 +199,7 @@ py -3.13 -m dbt.cli.main build
 ├── dbt_project.yml
 ├── veri_oku.py
 └── README.md
+
 ```
 
 ## 👥 Proje Ekibi
@@ -195,3 +215,42 @@ Proje geliştirme süreci devam etmektedir. Veri dönüşüm modelleri, analiz t
 Projede kullanılan veri setlerinin kaynakları ve açıklamaları, ilgili veri seti dokümantasyonlarında belirtilmiştir.
 
 Veri setleri analiz ve eğitim amaçlı kullanılmaktadır.
+
+## 📚 Ek Çalışmalar ve Proje Geliştirmeleri
+
+### Veri Sözlüğü
+
+Projede kullanılan veri alanlarının açıklamaları
+`docs/veri_sozlugu.md` dosyasında bulunmaktadır.
+
+### Jupyter Notebook Analizleri
+
+`notebooks/e_ticaret_veri_analizi.ipynb` dosyasında
+Python, Pandas ve Matplotlib kullanılarak
+aşağıdaki analizler gerçekleştirilmiştir:
+
+- Veri kalitesi kontrolü
+- Ürün kategorilerine göre toplam satış analizi
+- Ödeme yöntemlerine göre sipariş sayısı analizi
+- Müşteri memnuniyeti puanlarının analizi
+- Analiz sonuçlarının grafiklerle görselleştirilmesi
+
+### Güncellenen dbt Testleri
+
+Staging modeli üzerinde toplam 5 veri kalitesi
+testi başarıyla çalıştırılmıştır:
+
+- customer_id: unique
+- customer_id: not_null
+- Payment_Method: not_null
+- Product_Category: not_null
+- Unit_Price: not_null
+
+Test sonucu: PASS=5, WARN=0, ERROR=0
+
+### Güncellenen Staging Yapısı
+
+Staging modeli daha düzenli bir proje yapısı
+oluşturmak amacıyla aşağıdaki konuma taşınmıştır:
+
+`models/staging/stg_ecommerce_customers.sql`
