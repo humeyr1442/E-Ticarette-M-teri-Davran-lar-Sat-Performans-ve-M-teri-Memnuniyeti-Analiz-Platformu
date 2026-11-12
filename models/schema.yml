@@ -1,3 +1,4 @@
+
 version: 2
 
 models:
@@ -5,6 +6,18 @@ models:
     description: "Temizlenmiş müşteri verileri"
     columns:
       - name: customer_id
-        tests:
+        data_tests:
           - unique
+          - not_null
+
+      - name: Payment_Method
+        data_tests:
+          - not_null
+
+      - name: Product_Category
+        data_tests:
+          - not_null
+
+      - name: Unit_Price
+        data_tests:
           - not_null
