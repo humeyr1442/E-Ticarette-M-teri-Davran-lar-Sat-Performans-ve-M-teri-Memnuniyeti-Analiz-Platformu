@@ -11,5 +11,5 @@ SELECT
     AVG(Total_Amount) AS Average_Order_Value,
     AVG(Session_Duration_Minutes) AS Avg_Session_Duration,
     AVG(Pages_Viewed) AS Avg_Pages_Viewed
-FROM ecommerce_customer_behavior_dataset_v2
+FROM {{ ref('ecommerce_customer_behavior_dataset_v2') }}
 GROUP BY Customer_ID
