@@ -12,4 +12,4 @@ SELECT
     Is_Returning_Customer,
     Session_Duration_Minutes,
     Pages_Viewed
-FROM {{ ref('ecommerce_customer_behavior_dataset_v2') }}
+FROM {{ ref('stg_ecommerce_customers_v2') }}

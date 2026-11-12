@@ -12,4 +12,4 @@ SELECT
     Discount_Amount,
     Total_Amount,
     Payment_Method
-FROM {{ ref('ecommerce_customer_behavior_dataset_v2') }}
+FROM {{ ref('stg_ecommerce_customers_v2') }}
