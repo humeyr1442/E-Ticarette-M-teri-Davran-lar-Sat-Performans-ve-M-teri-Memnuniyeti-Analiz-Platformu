@@ -184,7 +184,8 @@ py -3.13 -m dbt.cli.main build
 │   │   ├── mart_sales.sql
 │   │   └── mart_satisfaction.sql
 │   ├── staging/
-│   │   └── stg_ecommerce_customers.sql
+│   │  │   │   ├── stg_ecommerce_customers.sql
+│   │   └── stg_ecommerce_customers_v2.sql
 │   └── schema.yml
 ├── notebooks/
 │   └── e_ticaret_veri_analizi.ipynb
@@ -250,7 +251,14 @@ Test sonucu: PASS=5, WARN=0, ERROR=0
 
 ### Güncellenen Staging Yapısı
 
-Staging modeli daha düzenli bir proje yapısı
-oluşturmak amacıyla aşağıdaki konuma taşınmıştır:
+Projede iki staging modeli bulunmaktadır:
 
-`models/staging/stg_ecommerce_customers.sql`
+- `stg_ecommerce_customers.sql`: İlk veri setinin hazırlanması.
+- `stg_ecommerce_customers_v2.sql`: İkinci veri setinin (17.049 satır) hazırlanması.
+
+İkinci staging modeli, üç mart modeline veri sağlamaktadır:
+
+`ecommerce_customer_behavior_dataset_v2 → stg_ecommerce_customers_v2 → mart_customers / mart_sales / mart_satisfaction`
+
+Bu yapı sayesinde veri kaynakları ile analiz tabloları arasındaki bağlantılar dbt Docs üzerinde görüntülenebilmektedir.
+
