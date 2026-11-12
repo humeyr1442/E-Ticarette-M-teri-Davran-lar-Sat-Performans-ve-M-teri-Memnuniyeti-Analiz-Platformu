@@ -3,3 +3,9 @@ target/
 dbt_packages/
 logs/
 .env
+dbt_internal_packages/
+*.duckdb
+*.duckdb.wal
+__pycache__/
+*.pyc
+.venv/
